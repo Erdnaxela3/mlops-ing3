@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "mlops-tp1"
+version = "0.1.0"
+description = ""
+authors = ["Alexandre WENG <alexandre.weng@epita.fr>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "0.115.2"
+joblib = "1.4.2"
+numpy = "2.1.2"
+pandas = "2.2.3"
+scikit-learn = "1.5.2"
+streamlit = "1.39.0"
+uvicorn = "0.32.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
