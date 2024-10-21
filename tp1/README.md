@@ -154,3 +154,9 @@ Test it using the same curl command as in [2.2.1](#221-fastapi-on-local-machine)
 
 ### 2.2.4 (Level 3) CI/CD pipeline using GitHub actions
 
+Setup your repository secrets:
+ - DOCKER_USERNAME (your Docker Hub username)
+ - DOCKER_PASSWORD (your Docker Hub access token)
+ - EC2_KEYPEM (the content of your keypair to ssh into the remote machine)
+ - SSH_ADDRESS (the ec2 public IP)
+ - SSH_USERNAME (usually ec2-user)
