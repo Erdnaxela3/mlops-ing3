@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  houses_web_api:
+    hostname: houses_web_api
+    container_name: houses_web_api
+    image: erdnaxela2/houses_web_api:1.0
+    build:
+      context: .
+    ports:
+      - "8042:8042"
