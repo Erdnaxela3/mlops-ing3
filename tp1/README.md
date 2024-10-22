@@ -3,8 +3,17 @@
 # Table of Contents
 
 - [1. Pre-requisites](#1)
-  - [1.1. Setting up the environment:](#11)
-    - [1.1.1. Using poetry](#111)
+  - [1.1 Setting up the environment:](#11)
+    - [1.1.1 Using poetry](#111)
+    - [1.1.2 Using pip](#112)
+- [2. Steps](#2)
+  - [2.1 Using a ML model in streamlit](#21)
+  - [2.2 A machine learning model in a web service mini-project](#22)
+    - [2.2.1 (Level 0) FastAPI on local machine](#221)
+    - [2.2.2 (Level 1) Docker on local machine](#222)
+    - [2.2.3 (Level 2) Using docker-compose on a remote machine](#223)
+    - [2.2.4 (Level 3) CI/CD pipeline using GitHub actions](#224)
+    - [2.2.5 (Level 4) Deploy a more interesting model](#225)
 
 
 # 1. Pre-requisites
@@ -55,7 +64,7 @@ curl -X 'POST' \
 #### 2.2.2.1 Raw docker CLI on local machine
 
 Build the docker image:
-```bash
+```bashc
 docker build -t houses_web_api .
 ```
 
@@ -94,6 +103,7 @@ Test it using the same curl command as in [2.2.1](#221-fastapi-on-local-machine)
 Launch EC2 instance of AWS:
  - Allow SSH from anywhere
  - Allow HTTP (Custom TCP Rule) on port 8042 from anywhere
+ - With sufficient EBS storage (20GB works, default 8 is not enough) 
 
 Installing docker on the remote machine:
 ```bash
@@ -161,9 +171,10 @@ Setup your repository secrets:
  - SSH_ADDRESS (the ec2 public IP)
  - SSH_USERNAME (usually ec2-user)
 
-### 2.2.5 (Level 5) Deploy a more interesting model
+### 2.2.5 (Level 4) Deploy a more interesting model
 
 Deployed a DistilBERT model using the Hugging Face Transformers library.
+Added a /predict_bert endpoint to the existing FastAPI web service.
 
 Test it using the following curl command:
 ```bash
