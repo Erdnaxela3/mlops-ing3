@@ -160,3 +160,16 @@ Setup your repository secrets:
  - EC2_KEYPEM (the content of your keypair to ssh into the remote machine)
  - SSH_ADDRESS (the ec2 public IP)
  - SSH_USERNAME (usually ec2-user)
+
+### 2.2.5 (Level 5) Deploy a more interesting model
+
+Deployed a DistilBERT model using the Hugging Face Transformers library.
+
+Test it using the following curl command:
+```bash
+curl -X 'POST' \
+  'http://localhost:8042/predict_bert' \
+    -H 'accept: application/json' \
+    -H 'Content-Type: application/json' \
+    -d '{"text": "I am happy to eat [MASK]."}'
+```

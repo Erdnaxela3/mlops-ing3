@@ -5,7 +5,7 @@ LABEL org.opencontainers.image.authors="Alexandre WENG <alexandre.weng@epita.fr>
 WORKDIR /web_api
 
 COPY requirements.txt web_service.py regression.joblib ./
-RUN pip install -r requirements.txt
+RUN pip install -r requirements.txt --no-cache-dir
 
 RUN adduser --system --no-create-home nonroot
 USER nonroot
