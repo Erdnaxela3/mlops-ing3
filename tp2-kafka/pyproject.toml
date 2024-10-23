@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "tp2-kafka"
+version = "0.1.0"
+description = ""
+authors = ["Alexandre WENG <alexandre.weng@epita.fr>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+kafka-python = "^2.0.2"
+numpy = "^2.1.2"
+scikit-learn = "^1.5.2"
+joblib = "^1.4.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
